@@ -31,7 +31,8 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:5173' : 'https://studio.dev.upscale.ai',
+    baseURL: process.env.E2E_ROOT_URL || 'http://127.0.0.1:5173',
+    // baseURL: process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:5173' : 'https://studio.dev.upscale.ai',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

@@ -4,14 +4,14 @@
   "type": "module",
   "scripts": {
     "build": "react-router build",
-    "bump:safe": "npx npm-check-updates --reject \"recharts, vite, zod, typescript\" -u",
+    "bump:safe": "npx npm-check-updates --reject \"recharts, vite, zod\" -u",
     "bump:tvads": "npx npm-check-updates -u \"@upscale-ai/control-room\"",
     "check:verbose": "npm run typecheck:verbose && npm run lint > lint-errors.txt 2>&1",
     "check": "npm run typecheck",
     "dev": "react-router dev",
     "export-routes": "npx react-router routes --json > routes.json",
     "lint": "eslint . --ignore-pattern 'temp/**'",
-    "format": "npx prettier --write \"**/*.{ts,tsx,css,md}\"",
+    "format": "npx prettier --write \"**/*.{ts,tsx,css}\"",
     "routes:json": "npx react-router routes --json",
     "routes": "npx react-router routes",
     "start": "react-router-serve ./build/server/index.js",
@@ -26,8 +26,8 @@
     "validate": "npm run check && npm run build && npm run lint && npm run export-routes"
   },
   "dependencies": {
-    "@clerk/react-router": "^1.8.9",
-    "@clerk/testing": "^1.10.9",
+    "@clerk/react-router": "^1.8.10",
+    "@clerk/testing": "^1.10.10",
     "@epic-web/invariant": "^1.0.0",
     "@faker-js/faker": "^9.9.0",
     "@headlessui/react": "^2.2.7",
@@ -52,10 +52,10 @@
     "@radix-ui/react-tooltip": "^1.2.7",
     "@react-router/node": "^7.7.1",
     "@react-router/serve": "^7.7.1",
-    "@tanstack/react-form": "^1.17.0",
+    "@tanstack/react-form": "^1.18.0",
     "@tanstack/react-query": "^5.84.1",
     "@tanstack/react-query-devtools": "^5.84.1",
-    "@upscale-ai/control-room": "^1.37.3",
+    "@upscale-ai/control-room": "^1.39.6",
     "@wavesurfer/react": "^1.0.11",
     "alloy-frontend": "^2.1.1",
     "canvas": "^3.1.2",
@@ -104,11 +104,9 @@
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4.1.11",
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.2",
     "typescript-eslint": "^8.39.0",
     "vite": "^6.3.5",
-    "vite-tsconfig-paths": "^5.1.4",
-    "checkly": "latest",
-    "jiti": "^2"
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }
